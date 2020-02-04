@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+set -e
+ 
+cd $(dirname $0)/..
+ 
+if [ ! "$(docker network ls -q -f name=local_dev)" ]; then
+ echo [INFO] Create local_dev network
+ docker network create local_dev
+fi
+ 
+echo "Build app image"
+docker-compose build
+echo "Setup database"
+docker-compose run --rm -T  listing-service ./bin/wait_for_postgres listing-db bundle exec rake db:create db:migrate db:seed
+echo "All bootstrapped"
+docker-compose down

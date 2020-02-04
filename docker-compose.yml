@@ -1,0 +1,39 @@
+version: '2.0'
+services:
+ listing-db:
+   image: postgres:11.6
+   restart: always
+   # opening port for development use
+   ports:
+     - '5432:5432'
+   volumes:
+     - 'postgres:/var/lib/postgresql/data'
+   networks:
+     - "local_dev"
+   environment:
+     POSTGRES_USER: root
+     POSTGRES_PASSWORD: root
+ 
+ listing-service:
+   build: .
+   ports:
+     - '3001:3000'
+   networks:
+     - "local_dev"
+   volumes:
+     - .:/app
+   command: ./bin/start_server
+   environment:
+     POSTGRES_HOST: listing-db
+     POSTGRES_USER: root
+     POSTGRES_PASSWORD: root
+     RUBYOPT: '-W:no-deprecated -W:no-experimental'
+   depends_on:
+     - listing-db
+ 
+volumes:
+ postgres:
+ 
+networks:
+ local_dev:
+   external: true

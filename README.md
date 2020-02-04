@@ -1,24 +1,23 @@
-# README
+# Overview
+This is a test project for GraphQL API with Rails.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Ruby version
+2.7.0
 
-Things you may want to cover:
+## Rails version
+6.0.2.1
 
-* Ruby version
+## GraphQL version
+graphql-ruby 1.10.2
 
-* System dependencies
 
-* Configuration
+## How to run in docker
 
-* Database creation
+```base
+# build images
+./bootstrap
 
-* Database initialization
+# start api server
+docker-compose up listing-service
+```
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
