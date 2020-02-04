@@ -19,5 +19,15 @@ graphql-ruby 1.10.2
 
 # start api server
 docker-compose up listing-service
+
 ```
 
+## GraphQL Client
+
+install `graphql playground`
+
+choose [URL ENDPOINT]
+
+input 'http://localhost:3001/graphql'
+
+And go nuts
