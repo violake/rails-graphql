@@ -3,9 +3,9 @@ set -e
  
 cd $(dirname $0)/..
  
-if [ ! "$(docker network ls -q -f name=local_dev)" ]; then
- echo [INFO] Create local_dev network
- docker network create local_dev
+if [ ! "$(docker network ls -q -f name=pll_local)" ]; then
+ echo [INFO] Create pll_local network
+ docker network create pll_local
 fi
  
 echo "Build app image"

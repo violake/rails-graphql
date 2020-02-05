@@ -14,11 +14,14 @@ graphql-ruby 1.10.2
 ## How to run in docker
 
 ```base
-# build images
-./bootstrap
+# build container
+./auto/build
 
 # start api server
 docker-compose up listing-service
+
+# rspec test
+./auto/test
 
 ```
 
