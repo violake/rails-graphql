@@ -2,4 +2,8 @@
 
 require_relative 'config/environment'
 
+map '/diagnostic' do
+  run REA::HealthCheck::DiagnosticApp
+end
+
 run Rails.application

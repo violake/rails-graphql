@@ -8,6 +8,7 @@ gem 'graphql', '~> 1.10.2'
 gem 'pg', '~> 1.2.2'
 gem 'puma', '~> 4.1'
 gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
+gem 'rea-health-check', source: 'http://rubygems.delivery.realestate.com.au'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
