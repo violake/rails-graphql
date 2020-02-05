@@ -1,4 +1,15 @@
 require 'factory_bot_rails'
+require 'simplecov'
+
+SimpleCov.minimum_coverage 95
+
+SimpleCov.start do
+  add_filter 'spec'
+  add_filter 'config/routes.rb'
+  add_filter 'app/admin'
+  add_filter 'initializers'
+  add_filter 'app/helpers/custom_healthchecks.rb'
+end
 
 RSpec.configure do |config|
 

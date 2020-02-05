@@ -18,6 +18,8 @@ group :development, :test do
   gem 'factory_bot_rails', '~> 5.1.1'
   gem 'pry-byebug'
   gem 'rspec-rails', '3.9.0'
+  gem 'shoulda-matchers'
+  gem 'simplecov', require: false
 end
 
 group :development do

@@ -31,3 +31,20 @@ choose [URL ENDPOINT]
 input 'http://localhost:3001/graphql'
 
 And go nuts
+
+
+
+
+## Changes to Rails 5
+
+### new load engine
+
+ref: https://medium.com/cedarcode/understanding-zeitwerk-in-rails-6-f168a9f09a1f
+
+### no longer use SECRET_KEY_BASE
+
+ref: https://blog.saeloun.com/2019/10/10/rails-6-adds-support-for-multi-environment-credentials.html
+
+config/credentials.yml.enc
+config/master.key
+
